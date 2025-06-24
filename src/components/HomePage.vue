@@ -34,7 +34,7 @@
                 subtitle="Graduation of Friday"
                 text="Soon, students will gather, adorned in their caps and gowns, ready to cross the stage and receive the degrees they've diligently pursued. This ceremony isn't just about diplomas; it's a recognition of countless hours spent in lectures, labs, and libraries, the overcoming of academic challenges, and the forging of lifelong friendships. "
                 title="Class of 2025!"
-                color = "indigo-lighten-2"
+                color = 'indigo-lighten-2'
             ></v-card>
             </v-col>
 
