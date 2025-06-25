@@ -1,8 +1,16 @@
 <script setup>
 import {ref} from 'vue'
 import { useCoursesStore } from '../stores/courses'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 const coursesStore = useCoursesStore() //making the courses accessible
 const courses= coursesStore.courses
+
+function apply(courseId){
+        coursesStore.updateSelectedCourse(courseId) // keep track of the course selected
+        router.push('/apply')
+}
 
 </script>
 
@@ -23,7 +31,11 @@ const courses= coursesStore.courses
                 <v-card-text>
                     {{course.intake}}
                 </v-card-text>
+                <v-card-actions>
+                    <v-btn color = "primary" @click="apply(course.id)"> Apply </v-btn>
+                </v-card-actions>
             </v-card>
+            
             </v-col>
         </v-row>
     </v-container>
