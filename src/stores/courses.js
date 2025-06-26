@@ -88,5 +88,6 @@ export const useCoursesStore = defineStore('courses',  {
         updateSelectedCourse (payload) { //payload is same as courseId
             this.selectedCourse = payload
         }
-    }
+    },
+    persist: true,
 })

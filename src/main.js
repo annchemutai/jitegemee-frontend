@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia' //state management
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 
 import App from './App.vue'
@@ -19,9 +20,13 @@ const vuetify = createVuetify({
     defaultSet: 'mdi', // This is already the default value - only for display purposes
   },
 })
+
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
+
 const app = createApp(App)
 
-app.use(createPinia())
+app.use(pinia)
 app.use(router)
 app.use(vuetify)
 
